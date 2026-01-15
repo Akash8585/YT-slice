@@ -1,6 +1,6 @@
 # YT Slice
 
-A full-stack web application that calculates the total duration of a selected range of videos from a YouTube playlist.
+A full-stack web application that calculates the total duration of a selected range of videos from a YouTube playlist    .
 
 ## Features
 
