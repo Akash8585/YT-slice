@@ -181,7 +181,8 @@ export default function Home() {
                   className={completePlaylist ? 'bg-gray-100 cursor-not-allowed' : ''}
                   {...register('startVideo', { 
                     required: !completePlaylist && 'Start video number is required',
-                    min: { value: 1, message: 'Start video must be at least 1' }
+                    min: { value: 1, message: 'Start video must be at least 1' },
+                    valueAsNumber: true
                   })}
                 />
                 {errors.startVideo && !completePlaylist && (
@@ -202,6 +203,7 @@ export default function Home() {
                   {...register('endVideo', { 
                     required: !completePlaylist && 'End video number is required',
                     min: { value: 1, message: 'End video must be at least 1' },
+                    valueAsNumber: true,
                     validate: (value) => {
                       if (completePlaylist) return true;
                       const startVideo = watch('startVideo');
