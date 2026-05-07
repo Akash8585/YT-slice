@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -396,6 +397,32 @@ export default function Home() {
               <p className="mt-2 text-sm text-muted-foreground">{faq.answer}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-10 space-y-4" aria-labelledby="guides-heading">
+        <h2 id="guides-heading" className="text-2xl font-semibold tracking-tight">
+          Playlist Time Guides
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Link
+            href="/how-to-calculate-youtube-playlist-length"
+            className="rounded-lg border p-4 transition-colors hover:bg-muted/50"
+          >
+            <h3 className="font-semibold">How to calculate playlist length</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              A step-by-step guide for finding total YouTube playlist watch time.
+            </p>
+          </Link>
+          <Link
+            href="/custom-youtube-playlist-range-calculator"
+            className="rounded-lg border p-4 transition-colors hover:bg-muted/50"
+          >
+            <h3 className="font-semibold">Custom playlist range calculator</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Learn how to calculate only videos 12 to 40, 50 to 100, or any other range.
+            </p>
+          </Link>
         </div>
       </section>
     </main>
