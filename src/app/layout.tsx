@@ -94,36 +94,6 @@ export default function RootLayout({
           "Show selected video durations and average video length",
         ],
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "How do I calculate the length of a YouTube playlist?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Paste a YouTube playlist URL into YT Slice and calculate the full playlist duration or a selected range of videos.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can I calculate only part of a YouTube playlist?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. YT Slice lets you choose a custom start video and end video so you can calculate the duration of only that playlist range.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Does YT Slice show watch time at faster playback speeds?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. After calculating a playlist or range, YT Slice shows estimated watch time at common playback speeds including 1.25x, 1.5x, 1.75x, and 2x.",
-            },
-          },
-        ],
-      },
     ],
   };
 
