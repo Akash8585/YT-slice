@@ -167,7 +167,7 @@ export async function POST(request: NextRequest) {
     const videoDetails = await fetchVideoDetails(videoIds, apiKey);
 
     // Create video data with durations
-    const selectedVideos = selectedItems.map((item, index) => {
+    const selectedVideos = selectedItems.map((item) => {
       const videoDetail = videoDetails.find(v => v.id === item.snippet.resourceId.videoId);
       const durationSeconds = videoDetail ? parseDuration(videoDetail.contentDetails.duration) : 0;
       
